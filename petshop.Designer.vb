@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class petshop
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,11 @@ Partial Class petshop
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(petshop))
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txt_total = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txt_ufcarrinho = New ns1.BunifuMaterialTextbox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -74,6 +75,7 @@ Partial Class petshop
         Me.TabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
         Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage2.Controls.Add(Me.txt_total)
         Me.TabPage2.Controls.Add(Me.Label14)
         Me.TabPage2.Controls.Add(Me.txt_ufcarrinho)
         Me.TabPage2.Controls.Add(Me.Label10)
@@ -110,6 +112,15 @@ Partial Class petshop
         Me.TabPage2.Size = New System.Drawing.Size(805, 443)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CARRINHO"
+        '
+        'txt_total
+        '
+        Me.txt_total.AutoSize = True
+        Me.txt_total.Location = New System.Drawing.Point(611, 243)
+        Me.txt_total.Name = "txt_total"
+        Me.txt_total.Size = New System.Drawing.Size(102, 13)
+        Me.txt_total.TabIndex = 65
+        Me.txt_total.Text = "Valor Total: R$ 0,00"
         '
         'Label14
         '
@@ -708,4 +719,5 @@ Partial Class petshop
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents sair_petshop As Label
+    Friend WithEvents txt_total As Label
 End Class

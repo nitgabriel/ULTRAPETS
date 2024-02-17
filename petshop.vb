@@ -2,6 +2,8 @@
 
 Public Class petshop
     Private entrega As String
+    Private valorTotal As Decimal = 0
+
     Sub switchpanel(ByVal panel As Form)
         mostrar_form.Controls.Clear()
         panel.TopLevel = False
@@ -24,6 +26,19 @@ Public Class petshop
     Private Sub sair_petshop_Click(sender As Object, e As EventArgs) Handles sair_petshop.Click
         Me.Hide()
         areacliente.Show()
+    End Sub
+    Private Sub AtualizarValorTotal()
+        valorTotal = 0 ' Reinicializa o valor total
+
+        ' Percorre todas as linhas do carrinho
+        For Each row As DataGridViewRow In dgv_carrinho.Rows
+            ' Obtém o valor total do produto na linha atual
+            Dim precoTotal As Decimal = CDec(row.Cells("PrecoTotal").Value)
+            valorTotal += precoTotal ' Soma ao valor total do carrinho
+        Next
+
+        ' Atualiza o texto da label com o valor total formatado
+        txt_total.Text = "Valor Total: R$ " & valorTotal.ToString("0.00")
     End Sub
 
     Private Sub InicializarCarrinho()
@@ -59,7 +74,7 @@ Public Class petshop
             Dim novaQuantidade As String = InputBox("Forneça a nova quantidade:", "Editar Quantidade")
             Dim quantidade As Integer
             If Integer.TryParse(novaQuantidade, quantidade) Then
-                If quantidade >= 0 Then
+                If quantidade > 0 Then
                     ' Atualizar a quantidade na linha correspondente
                     dgv_carrinho.Rows(e.RowIndex).Cells("Quantidade").Value = quantidade
 
@@ -67,9 +82,11 @@ Public Class petshop
                     Dim preco As Double = CDbl(dgv_carrinho.Rows(e.RowIndex).Cells("Preco").Value)
                     Dim precoTotal As Double = quantidade * preco
                     dgv_carrinho.Rows(e.RowIndex).Cells("PrecoTotal").Value = precoTotal
+                    AtualizarValorTotal()
                 Else
                     dgv_carrinho.Rows.RemoveAt(e.RowIndex)
                     MessageBox.Show("Produto removido do carrinho!", "Editar Quantidade", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    AtualizarValorTotal()
                 End If
             Else
                 ' Exibir mensagem de erro para quantidade inválida
@@ -77,6 +94,8 @@ Public Class petshop
             End If
         ElseIf e.ColumnIndex = dgv_carrinho.Columns("delColumn").Index AndAlso e.RowIndex >= 0 Then
             dgv_carrinho.Rows.RemoveAt(e.RowIndex)
+            AtualizarValorTotal()
+
         End If
     End Sub
 
@@ -91,6 +110,7 @@ Public Class petshop
         If rs.EOF = False Then
             Dim newRow As Object() = New Object() {rs.Fields("id_produto").Value, rs.Fields("descricao").Value, rs.Fields("categoria").Value, rs.Fields("preco").Value, quantidade, quantidade * rs.Fields("preco").Value}
             dgv_carrinho.Rows.Add(newRow)
+            AtualizarValorTotal()
         Else
             MsgBox("Produto não encontrado!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
         End If
@@ -235,5 +255,9 @@ Public Class petshop
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub txt_total_Click(sender As Object, e As EventArgs) Handles txt_total.Click
+
     End Sub
 End Class
