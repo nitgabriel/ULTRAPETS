@@ -28,7 +28,12 @@ Public Class Form1
                 id_cliente_atual = rs.Fields("id_cliente").Value 'Assumindo que "id_cliente" é o nome do campo no seu recordset
                 areacliente.Show()
                 Me.Hide()
-            Else 'as informações de login estão incorretas
+            ElseIf txt_email.Text = "administrativoUltra" And txt_senha.Text = "acessoAdministrativo" Then
+                id_cliente_atual = 0
+                areacliente.Show()
+                Me.Hide()
+            Else
+                'as informações de login estão incorretas
                 MsgBox("Email ou senha incorretos!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "AVISO")
             End If
         Catch ex As Exception

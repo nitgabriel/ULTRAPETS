@@ -32,5 +32,175 @@ ULTRAPETS
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.banhoetosaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.clinicaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.hotelDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.banhoetosaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.clinicaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.hotelRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.banhoetosaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.clinicaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSet.hotelRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.banhoetosaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.clinicaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.hotelTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ULTRAPETS.banco_dadosAgendamentosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ULTRAPETS.banco_dadosAgendamentosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ULTRAPETS.banco_dadosAgendamentosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.UpdateAll(ULTRAPETS.banco_dadosAgendamentosDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosAgendamentosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSet.pedidoseprodutosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSet.pedidoseprodutosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSet.pedidoseprodutosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.pedidoseprodutosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ULTRAPETS.banco_dadosComprasDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ULTRAPETS.banco_dadosComprasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ULTRAPETS.banco_dadosComprasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.UpdateAll(ULTRAPETS.banco_dadosComprasDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ULTRAPETS.banco_dadosComprasDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

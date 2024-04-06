@@ -20,12 +20,20 @@
     End Sub
 
     Private Sub areacliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Hide()
-        Form1.Show()
+        If id_cliente_atual = 0 Then
+            btn_adm.Visible = True
+        Else
+            btn_adm.Visible = False
+        End If
     End Sub
 
     Private Sub btn_petshop_Click(sender As Object, e As EventArgs) Handles btn_petshop.Click
         Me.Hide()
         petshop.Show()
+    End Sub
+
+    Private Sub btn_adm_Click(sender As Object, e As EventArgs) Handles btn_adm.Click
+        Me.Hide()
+        administrativo.Show()
     End Sub
 End Class

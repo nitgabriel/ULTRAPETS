@@ -28,6 +28,7 @@ Partial Class areacliente
         Me.btn_creche = New System.Windows.Forms.Button()
         Me.btn_vet = New System.Windows.Forms.Button()
         Me.btn_petshop = New System.Windows.Forms.Button()
+        Me.btn_adm = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn_banhotosa
@@ -95,6 +96,20 @@ Partial Class areacliente
         Me.btn_petshop.TabIndex = 4
         Me.btn_petshop.UseVisualStyleBackColor = False
         '
+        'btn_adm
+        '
+        Me.btn_adm.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btn_adm.BackgroundImage = CType(resources.GetObject("btn_adm.BackgroundImage"), System.Drawing.Image)
+        Me.btn_adm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_adm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_adm.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btn_adm.Location = New System.Drawing.Point(764, 12)
+        Me.btn_adm.Name = "btn_adm"
+        Me.btn_adm.Size = New System.Drawing.Size(24, 26)
+        Me.btn_adm.TabIndex = 5
+        Me.btn_adm.UseVisualStyleBackColor = False
+        Me.btn_adm.Visible = False
+        '
         'areacliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -103,6 +118,7 @@ Partial Class areacliente
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btn_adm)
         Me.Controls.Add(Me.btn_petshop)
         Me.Controls.Add(Me.btn_creche)
         Me.Controls.Add(Me.btn_vet)
@@ -121,4 +137,5 @@ Partial Class areacliente
     Friend WithEvents btn_creche As Button
     Friend WithEvents btn_vet As Button
     Friend WithEvents btn_petshop As Button
+    Friend WithEvents btn_adm As Button
 End Class

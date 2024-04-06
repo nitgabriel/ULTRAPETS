@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="banco_dadosAgendamentosDataSet" targetNamespace="http://tempuri.org/banco_dadosAgendamentosDataSet.xsd" xmlns:mstns="http://tempuri.org/banco_dadosAgendamentosDataSet.xsd" xmlns="http://tempuri.org/banco_dadosAgendamentosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="banco_dadosConnectionStringAgend" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="banco_dadosConnectionStringAgend (MySettings)" PropertyReference="ApplicationSettings.ULTRAPETS.My.MySettings.GlobalReference.Default.banco_dadosConnectionStringAgend" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="banhoetosaTableAdapter" GeneratorDataComponentClassName="banhoetosaTableAdapter" Name="banhoetosa" UserDataComponentName="banhoetosaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="banco_dadosConnectionStringAgend (MySettings)" DbObjectName="banhoetosa" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_cliente, id_banho, nome_pet, servico, data, horario, valor FROM banhoetosa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="id_banho" DataSetColumn="id_banho" />
+              <Mapping SourceColumn="nome_pet" DataSetColumn="nome_pet" />
+              <Mapping SourceColumn="servico" DataSetColumn="servico" />
+              <Mapping SourceColumn="data" DataSetColumn="data" />
+              <Mapping SourceColumn="horario" DataSetColumn="horario" />
+              <Mapping SourceColumn="valor" DataSetColumn="valor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clinicaTableAdapter" GeneratorDataComponentClassName="clinicaTableAdapter" Name="clinica" UserDataComponentName="clinicaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="banco_dadosConnectionStringAgend (MySettings)" DbObjectName="clinica" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_cliente, id_pet, nomepet, racapet, data, genero FROM clinica</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="id_pet" DataSetColumn="id_pet" />
+              <Mapping SourceColumn="nomepet" DataSetColumn="nomepet" />
+              <Mapping SourceColumn="racapet" DataSetColumn="racapet" />
+              <Mapping SourceColumn="data" DataSetColumn="data" />
+              <Mapping SourceColumn="genero" DataSetColumn="genero" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="hotelTableAdapter" GeneratorDataComponentClassName="hotelTableAdapter" Name="hotel" UserDataComponentName="hotelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="banco_dadosConnectionStringAgend (MySettings)" DbObjectName="hotel" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_cliente, id_reserva, nome_pet, numero_quarto, data_entrada, data_saida, valor FROM hotel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="id_reserva" DataSetColumn="id_reserva" />
+              <Mapping SourceColumn="nome_pet" DataSetColumn="nome_pet" />
+              <Mapping SourceColumn="numero_quarto" DataSetColumn="numero_quarto" />
+              <Mapping SourceColumn="data_entrada" DataSetColumn="data_entrada" />
+              <Mapping SourceColumn="data_saida" DataSetColumn="data_saida" />
+              <Mapping SourceColumn="valor" DataSetColumn="valor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="banco_dadosAgendamentosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="banco_dadosAgendamentosDataSet" msprop:Generator_DataSetName="banco_dadosAgendamentosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="banhoetosa" msprop:Generator_RowEvHandlerName="banhoetosaRowChangeEventHandler" msprop:Generator_RowDeletedName="banhoetosaRowDeleted" msprop:Generator_RowDeletingName="banhoetosaRowDeleting" msprop:Generator_RowEvArgName="banhoetosaRowChangeEvent" msprop:Generator_TablePropName="banhoetosa" msprop:Generator_RowChangedName="banhoetosaRowChanged" msprop:Generator_RowChangingName="banhoetosaRowChanging" msprop:Generator_TableClassName="banhoetosaDataTable" msprop:Generator_RowClassName="banhoetosaRow" msprop:Generator_TableVarName="tablebanhoetosa" msprop:Generator_UserTableName="banhoetosa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_UserColumnName="id_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="id_banho" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id_banho" msprop:Generator_ColumnPropNameInTable="id_banhoColumn" msprop:Generator_ColumnVarNameInTable="columnid_banho" msprop:Generator_UserColumnName="id_banho" type="xs:int" />
+              <xs:element name="nome_pet" msprop:Generator_ColumnPropNameInRow="nome_pet" msprop:Generator_ColumnPropNameInTable="nome_petColumn" msprop:Generator_ColumnVarNameInTable="columnnome_pet" msprop:Generator_UserColumnName="nome_pet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="servico" msprop:Generator_ColumnPropNameInRow="servico" msprop:Generator_ColumnPropNameInTable="servicoColumn" msprop:Generator_ColumnVarNameInTable="columnservico" msprop:Generator_UserColumnName="servico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data" msprop:Generator_ColumnPropNameInRow="data" msprop:Generator_ColumnPropNameInTable="dataColumn" msprop:Generator_ColumnVarNameInTable="columndata" msprop:Generator_UserColumnName="data" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_UserColumnName="horario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="valor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_UserColumnName="valor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="clinica" msprop:Generator_RowEvHandlerName="clinicaRowChangeEventHandler" msprop:Generator_RowDeletedName="clinicaRowDeleted" msprop:Generator_RowDeletingName="clinicaRowDeleting" msprop:Generator_RowEvArgName="clinicaRowChangeEvent" msprop:Generator_TablePropName="clinica" msprop:Generator_RowChangedName="clinicaRowChanged" msprop:Generator_RowChangingName="clinicaRowChanging" msprop:Generator_TableClassName="clinicaDataTable" msprop:Generator_RowClassName="clinicaRow" msprop:Generator_TableVarName="tableclinica" msprop:Generator_UserTableName="clinica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_UserColumnName="id_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="id_pet" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id_pet" msprop:Generator_ColumnPropNameInTable="id_petColumn" msprop:Generator_ColumnVarNameInTable="columnid_pet" msprop:Generator_UserColumnName="id_pet" type="xs:int" />
+              <xs:element name="nomepet" msprop:Generator_ColumnPropNameInRow="nomepet" msprop:Generator_ColumnPropNameInTable="nomepetColumn" msprop:Generator_ColumnVarNameInTable="columnnomepet" msprop:Generator_UserColumnName="nomepet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="racapet" msprop:Generator_ColumnPropNameInRow="racapet" msprop:Generator_ColumnPropNameInTable="racapetColumn" msprop:Generator_ColumnVarNameInTable="columnracapet" msprop:Generator_UserColumnName="racapet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data" msprop:Generator_ColumnPropNameInRow="data" msprop:Generator_ColumnPropNameInTable="dataColumn" msprop:Generator_ColumnVarNameInTable="columndata" msprop:Generator_UserColumnName="data" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="genero" msprop:Generator_ColumnPropNameInRow="genero" msprop:Generator_ColumnPropNameInTable="generoColumn" msprop:Generator_ColumnVarNameInTable="columngenero" msprop:Generator_UserColumnName="genero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="hotel" msprop:Generator_RowEvHandlerName="hotelRowChangeEventHandler" msprop:Generator_RowDeletedName="hotelRowDeleted" msprop:Generator_RowDeletingName="hotelRowDeleting" msprop:Generator_RowEvArgName="hotelRowChangeEvent" msprop:Generator_TablePropName="hotel" msprop:Generator_RowChangedName="hotelRowChanged" msprop:Generator_RowChangingName="hotelRowChanging" msprop:Generator_TableClassName="hotelDataTable" msprop:Generator_RowClassName="hotelRow" msprop:Generator_TableVarName="tablehotel" msprop:Generator_UserTableName="hotel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_UserColumnName="id_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="id_reserva" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id_reserva" msprop:Generator_ColumnPropNameInTable="id_reservaColumn" msprop:Generator_ColumnVarNameInTable="columnid_reserva" msprop:Generator_UserColumnName="id_reserva" type="xs:int" />
+              <xs:element name="nome_pet" msprop:Generator_ColumnPropNameInRow="nome_pet" msprop:Generator_ColumnPropNameInTable="nome_petColumn" msprop:Generator_ColumnVarNameInTable="columnnome_pet" msprop:Generator_UserColumnName="nome_pet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numero_quarto" msprop:Generator_ColumnPropNameInRow="numero_quarto" msprop:Generator_ColumnPropNameInTable="numero_quartoColumn" msprop:Generator_ColumnVarNameInTable="columnnumero_quarto" msprop:Generator_UserColumnName="numero_quarto" type="xs:int" minOccurs="0" />
+              <xs:element name="data_entrada" msprop:Generator_ColumnPropNameInRow="data_entrada" msprop:Generator_ColumnPropNameInTable="data_entradaColumn" msprop:Generator_ColumnVarNameInTable="columndata_entrada" msprop:Generator_UserColumnName="data_entrada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="data_saida" msprop:Generator_ColumnPropNameInRow="data_saida" msprop:Generator_ColumnPropNameInTable="data_saidaColumn" msprop:Generator_ColumnVarNameInTable="columndata_saida" msprop:Generator_UserColumnName="data_saida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="valor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_UserColumnName="valor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:banhoetosa" />
+      <xs:field xpath="mstns:id_banho" />
+    </xs:unique>
+    <xs:unique name="clinica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:clinica" />
+      <xs:field xpath="mstns:id_pet" />
+    </xs:unique>
+    <xs:unique name="hotel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hotel" />
+      <xs:field xpath="mstns:id_reserva" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

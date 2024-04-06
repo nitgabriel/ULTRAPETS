@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="banco_dadosComprasDataSet" targetNamespace="http://tempuri.org/banco_dadosComprasDataSet.xsd" xmlns:mstns="http://tempuri.org/banco_dadosComprasDataSet.xsd" xmlns="http://tempuri.org/banco_dadosComprasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="banco_dadosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="banco_dadosConnectionString (MySettings)" PropertyReference="ApplicationSettings.ULTRAPETS.My.MySettings.GlobalReference.Default.banco_dadosConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pedidoseprodutosTableAdapter" GeneratorDataComponentClassName="pedidoseprodutosTableAdapter" Name="pedidoseprodutos" UserDataComponentName="pedidoseprodutosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="banco_dadosConnectionString (MySettings)" DbObjectName="pedidoseprodutos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_pedido, id_cliente, entrega, id_produto, quantidade, valortotal, cep, rua, numero FROM pedidoseprodutos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_pedido" DataSetColumn="id_pedido" />
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="entrega" DataSetColumn="entrega" />
+              <Mapping SourceColumn="id_produto" DataSetColumn="id_produto" />
+              <Mapping SourceColumn="quantidade" DataSetColumn="quantidade" />
+              <Mapping SourceColumn="valortotal" DataSetColumn="valortotal" />
+              <Mapping SourceColumn="cep" DataSetColumn="cep" />
+              <Mapping SourceColumn="rua" DataSetColumn="rua" />
+              <Mapping SourceColumn="numero" DataSetColumn="numero" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="banco_dadosConnectionString (MySettings)" DbObjectName="pedidoseprodutos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_pedido, id_cliente, entrega, id_produto, quantidade, valortotal, cep, rua, numero FROM pedidoseprodutos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="banco_dadosComprasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="banco_dadosComprasDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="banco_dadosComprasDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pedidoseprodutos" msprop:Generator_RowClassName="pedidoseprodutosRow" msprop:Generator_RowEvHandlerName="pedidoseprodutosRowChangeEventHandler" msprop:Generator_RowDeletedName="pedidoseprodutosRowDeleted" msprop:Generator_RowDeletingName="pedidoseprodutosRowDeleting" msprop:Generator_RowEvArgName="pedidoseprodutosRowChangeEvent" msprop:Generator_TablePropName="pedidoseprodutos" msprop:Generator_RowChangedName="pedidoseprodutosRowChanged" msprop:Generator_UserTableName="pedidoseprodutos" msprop:Generator_RowChangingName="pedidoseprodutosRowChanging" msprop:Generator_TableClassName="pedidoseprodutosDataTable" msprop:Generator_TableVarName="tablepedidoseprodutos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_pedido" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id_pedido" msprop:Generator_ColumnPropNameInTable="id_pedidoColumn" msprop:Generator_ColumnPropNameInRow="id_pedido" msprop:Generator_ColumnVarNameInTable="columnid_pedido" type="xs:int" minOccurs="0" />
+              <xs:element name="id_cliente" msprop:Generator_UserColumnName="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnVarNameInTable="columnid_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="entrega" msprop:Generator_UserColumnName="entrega" msprop:Generator_ColumnPropNameInTable="entregaColumn" msprop:Generator_ColumnPropNameInRow="entrega" msprop:Generator_ColumnVarNameInTable="columnentrega" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_produto" msprop:Generator_UserColumnName="id_produto" msprop:Generator_ColumnPropNameInTable="id_produtoColumn" msprop:Generator_ColumnPropNameInRow="id_produto" msprop:Generator_ColumnVarNameInTable="columnid_produto" type="xs:int" minOccurs="0" />
+              <xs:element name="quantidade" msprop:Generator_UserColumnName="quantidade" msprop:Generator_ColumnPropNameInTable="quantidadeColumn" msprop:Generator_ColumnPropNameInRow="quantidade" msprop:Generator_ColumnVarNameInTable="columnquantidade" type="xs:int" minOccurs="0" />
+              <xs:element name="valortotal" msprop:Generator_UserColumnName="valortotal" msprop:Generator_ColumnPropNameInTable="valortotalColumn" msprop:Generator_ColumnPropNameInRow="valortotal" msprop:Generator_ColumnVarNameInTable="columnvalortotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cep" msprop:Generator_UserColumnName="cep" msprop:Generator_ColumnPropNameInTable="cepColumn" msprop:Generator_ColumnPropNameInRow="cep" msprop:Generator_ColumnVarNameInTable="columncep" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rua" msprop:Generator_UserColumnName="rua" msprop:Generator_ColumnPropNameInTable="ruaColumn" msprop:Generator_ColumnPropNameInRow="rua" msprop:Generator_ColumnVarNameInTable="columnrua" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numero" msprop:Generator_UserColumnName="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -47,12 +47,51 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ULTRAPETS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ULTRAPETS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -86,6 +125,19 @@
     <Compile Include="agendhotel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="banco_dadosAgendamentosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_dadosAgendamentosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_dadosComprasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_dadosComprasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_dadosComprasDataSet.vb">
+      <DependentUpon>banco_dadosComprasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="banhotosa.Designer.vb">
       <DependentUpon>banhotosa.vb</DependentUpon>
     </Compile>
@@ -117,6 +169,18 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="administrativo.Designer.vb">
+      <DependentUpon>administrativo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="administrativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RelatorioAgendamentos.Designer.vb">
+      <DependentUpon>Form_RelatorioAgendamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RelatorioAgendamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="form_acessorios.Designer.vb">
       <DependentUpon>form_acessorios.vb</DependentUpon>
     </Compile>
@@ -133,6 +197,12 @@
       <DependentUpon>form_racoes.vb</DependentUpon>
     </Compile>
     <Compile Include="form_racoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RelatorioCompras.Designer.vb">
+      <DependentUpon>Form_RelatorioCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RelatorioCompras.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form_senha.Designer.vb">
@@ -225,6 +295,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="administrativo.resx">
+      <DependentUpon>administrativo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_acessorios.resx">
       <DependentUpon>form_acessorios.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_racoes.resx">
       <DependentUpon>form_racoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RelatorioAgendamentos.resx">
+      <DependentUpon>Form_RelatorioAgendamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RelatorioCompras.resx">
+      <DependentUpon>Form_RelatorioCompras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_senha.resx">
       <DependentUpon>form_senha.vb</DependentUpon>
@@ -264,11 +343,35 @@
     <EmbeddedResource Include="plano3.resx">
       <DependentUpon>plano3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Rel_Agendamento.rdlc" />
+    <EmbeddedResource Include="Rel_Compras.rdlc" />
     <EmbeddedResource Include="ultra.resx">
       <DependentUpon>ultra.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="banco_dadosAgendamentosDataSet.xsc">
+      <DependentUpon>banco_dadosAgendamentosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="banco_dadosAgendamentosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_dadosAgendamentosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_dadosAgendamentosDataSet.xss">
+      <DependentUpon>banco_dadosAgendamentosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="banco_dadosComprasDataSet.xsc">
+      <DependentUpon>banco_dadosComprasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="banco_dadosComprasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_dadosComprasDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_dadosComprasDataSet.xss">
+      <DependentUpon>banco_dadosComprasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -279,6 +382,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\background\crechepainel.png" />
@@ -296,6 +400,25 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
